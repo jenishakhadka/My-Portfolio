@@ -1,4 +1,3 @@
-/* Inporting Google fonts - Inter */
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
 *{
     margin: 0;
@@ -58,9 +57,9 @@ nav{
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* optional if you have nav links on the right */
+  justify-content: space-between; 
   padding: 20px 120px;
-  background-color: #834cd4; /* or any background color */
+  background-color: #834cd4; 
   position: sticky;
   top: 0;
   z-index: 100;
@@ -245,7 +244,7 @@ nav ul li a:hover::after{
 }
 
 .activity-image {
-  width: 300px; /* reduce size */
+  width: 300px; 
   flex-shrink: 0;
 }
 .activity.reverse {
@@ -424,7 +423,7 @@ nav ul li a:hover::after{
 .card-content .tag {
   display: inline-block;
   padding: 6px 12px;
-  background-color: #ccacfc; /* purple tag */
+  background-color: #ccacfc; 
   color: #000000;
   border-radius: 999px;
   font-size: 14px;
@@ -650,7 +649,7 @@ nav .fas{
 
 .full-width-img {
   width: 100%;
-  height: 500px; /* or whatever height you want */
+  height: 500px; 
   border-radius: 12px;
   max-width: 1000px;
   object-fit: cover;
@@ -668,7 +667,7 @@ nav .fas{
 
 /*--------Paper Roles---------*/
 .paper {
-  background: #303030; /* light paper tone */
+  background: #303030; 
   padding: 40px;
   margin: 40px auto;
   margin: 0.5rem 0;
