@@ -1,0 +1,799 @@
+/* Inporting Google fonts - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #141414;
+    color: white; 
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    padding: 40px, 120px;
+    background-position: center; 
+    display: flex;
+    align-items: center;
+}
+.header-text{
+    margin-top: 4%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: clamp(32px, 5vw, 60px);
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+.header-text h3{
+    font-size: clamp(20px, 3vw, 40px);
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+.header-text h1 span{
+    color: #834cd4;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+.container{
+    padding: 2px 10%;
+    display: block;
+    align-items: center;
+    text-align: left;
+    justify-content: space-between;
+    gap: 20px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* optional if you have nav links on the right */
+  padding: 20px 120px;
+  background-color: #834cd4; /* or any background color */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.button-container {
+  padding: 2px 0%;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 12px 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  font-weight: normal;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Active Button Left */
+.btn.active {
+  background-color: #834cd4; 
+  padding: 18px 18px;
+  font-size: 20px;
+  color: white;
+  border: none;
+}
+
+/* Inactive Button Right */
+.btn.inactive {
+  background-color: transparent;
+  color: #cccccc;           
+  border: 2px solid #cccccc; 
+  transition: 0.3s ease;
+}
+
+.btn.inactive:hover {
+  color: #834cd4;            
+  border-color: #834cd4;     
+  background-color: transparent; 
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* --------------about-------------- */
+
+#about{
+    padding: 80px 0;
+    color: white;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+    align-items: center;
+    justify-content: space-between;
+  }
+.about-col-2{
+    flex-basis: 60%;
+    align-items: center;
+    justify-content: space-between;
+}
+.about-img{
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  max-width: 1000px;
+  object-fit: cover;
+  display: block;
+}
+.sub-title{
+  font-size: 60px;
+  font-weight: 600;
+  text-align: left;
+  color: white;
+}
+.abt-par{
+    margin-top: 14px ;
+    text-align: left;
+    font-size: 26px;
+}
+.tab-titles{
+  display: flex;
+  margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #834cd4;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #834cd4;
+    font-size: 18px;
+}
+.tab-contents{
+    display: none;
+    text-align: left;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+.activities {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.activities h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: white;
+}
+
+.activity,
+.activity.reverse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.activity-image {
+  width: 300px; /* reduce size */
+  flex-shrink: 0;
+}
+.activity.reverse {
+  flex-direction: row-reverse;
+}
+
+.activity-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.activity-text {
+  width: 500px;
+  flex: 1;
+}
+
+.activity-text p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: white;
+}
+
+/* --------------services-------------- */
+
+#services{
+    padding: 40px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list p{
+  font-size: 20px;
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #f4f4f4;
+    font-size: 20px;
+    margin-top: 20px;
+    display: inline--block;
+}
+.services-list div:hover{
+    background: #834cd4;
+    transform: translateY(-10px);
+}
+
+/* --------------work-------------- */
+
+#work{
+    padding: 80px 0;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #834cd4);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px, 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #834cd4;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #834cd4;
+    padding: 14px 50px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #834cd4;
+}
+
+/*--- Cards in My work section ---*/
+.projects-section {
+  padding: 40px 40px;
+  background-color: #1e1e1e;
+  color: white;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.projects-section p {
+  font-size: 16px;
+  color: #bbbbbb;
+  margin-bottom: 40px;
+}
+
+/* Card Grid */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 60px;
+  justify-items: center;
+}
+
+/* Individual Card */
+.card {
+  background-color: #111;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  max-width: 400px;
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content .tag {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #ccacfc; /* purple tag */
+  color: #000000;
+  border-radius: 999px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.card-content h3 {
+  font-size: 24px;
+  margin: 10px 0;
+  color: #834cd4;
+}
+
+.card-content p {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 16px;
+}
+
+.meta {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  color: #999;
+}
+
+/*---------contact---------*/
+.footer {
+  background-color: #000000;
+  color: white;
+  padding: 20px 120px;
+  font-family: sans-serif;
+}
+
+.footer-header h2 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 1000; 
+  font-family: sans-serif;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: left;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.footer-col p {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.footer-col a:hover {
+  color: #834cd4;
+}
+
+.footer-col i {
+  margin-right: 8px;
+  color: #834cd4;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 24px;
+}
+/*------------css for small screens------------*/
+nav .fas{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    #header{
+        /*background-image: url(Images/phonebackground.png);*/
+        height: auto;
+        padding: 60px 0;
+    }
+    .header-text {
+        font-size: 16px;
+        margin-top: 0;
+        text-align: left;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    .header-text h3{
+        font-size: 25px;
+    }
+    .button-container {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: left;
+        justify-content: left;
+    }
+    .btn {
+        width: 80%;
+        max-width: 300px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #834cd4;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+        height: auto; 
+        width: auto;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-center {
+        flex-basis: 100%;
+    }
+    .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    }
+    .about-col-1,.about-col-2 {
+        flex-basis: 100%;
+        width: 100%;
+    }
+    .btn-abt {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+
+    .activity, .activity.reverse {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    }
+
+    .activity.reverse {
+      flex-direction: column;
+    }
+
+    .activity-text p {
+      margin-top: 20px;
+    }
+}
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
+
+.project-section {
+  padding: 0.4rem;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.project-top {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.project-text {
+  line-height: 1.8;
+  font-size: 17px;
+  flex: 2;
+}
+
+.full-width-img {
+  width: 100%;
+  height: 500px; /* or whatever height you want */
+  border-radius: 12px;
+  max-width: 1000px;
+  object-fit: cover;
+  display: block;
+}
+
+.color-box {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin: 0 4px;
+  border-radius: 4px;
+}
+
+/*--------Paper Roles---------*/
+.paper {
+  background: #303030; /* light paper tone */
+  padding: 40px;
+  margin: 40px auto;
+  margin: 0.5rem 0;
+  max-width: 1000px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  border: 1px solid #181818;
+}
+
+.paper-content {
+  font-family: 'Georgia', serif;
+  color: #ffffff;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+/*---------For Typography----------*/
+.copybook {
+  padding: 40px 20px;
+}
+
+.line-row {
+  position: relative;
+  height: 90px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* All 4 lines: top, bottom, and 2 middle */
+.line-row::before,
+.line-row::after,
+.line-row .middle-line1,
+.line-row .middle-line2 {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  border-top: 2px dashed #834cd4;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Outer lines */
+.line-row::before {
+  top: 0;
+}
+.line-row::after {
+  bottom: 0;
+}
+
+/* Middle lines */
+.line-row .middle-line1 {
+  top: 33%;
+}
+.line-row .middle-line2 {
+  top: 66%;
+}
+
+/* Text styling for all */
+.text {
+  color: white;
+  z-index: 1;
+  position: relative;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+/* Capital letters: taller so they touch top and bottom */
+.line-row.uppercase .text {
+  font-size: 100px;
+  line-height: 1;
+  text-transform: uppercase;
+  height: 100%;
+}
+
+/* Small letters: only fit between middle lines */
+.line-row.lowercase .text {
+  font-size: 40px;
+  line-height: 0.7;
+}
+
+ .button-btn {
+    display: flex;
+    justify-content: space-between; 
+    margin: 100px 0;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;     
+  }
+
+  .btn {
+    background-color: #834cd4;    
+    color: white;     
+    margin: 0 8px;     
+    width: fit-content;
+    justify-content: space-between;      
+    padding: 12px 25px;          
+    text-decoration: none;        
+    font-size: 18px;             
+    border-radius: 8px;           
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #7443be;   
+  }
+
+  .btn.disabled {
+  background-color: transparent;
+  color: #cccccc;           
+  border: 2px solid #cccccc; 
+  transition: 0.3s ease;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
