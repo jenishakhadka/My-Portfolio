@@ -16,7 +16,6 @@ body{
     width: 100%;
     height: 100vh;
     background-size: cover;
-    padding: 40px 5%;
     background-position: center; 
     display: flex;
     align-items: center;
@@ -24,6 +23,8 @@ body{
 .header-text{
     margin-top: 4%;
     font-size: 30px;
+    padding: 40px 0;
+    text-align: left;
 }
 .header-text h1{
     font-size: clamp(32px, 5vw, 60px);
@@ -40,13 +41,13 @@ body{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
 }
 .container{
-    padding: 2px 10%;
+    width: 100%;
+    padding: 2px 100px;
     display: block;
     align-items: center;
     text-align: justify;
     line-height: 1.6;
-    justify-content: space-between;
-    gap: 20px;
+    gap: 30px;
 }
 nav{
     display: flex;
@@ -102,7 +103,7 @@ nav{
 
 .button-container {
   padding: 2px 0%;
-  display: flex;
+  display: block;
   gap: 16px;
   justify-content: flex-start;
   margin-top: 30px;
@@ -113,15 +114,19 @@ nav{
   font-size: 18px;
   border-radius: 8px;
   font-weight: normal;
+  text-align: center;
+  width: 80%;
   cursor: pointer;
   transition: 0.3s ease;
 }
 
 /* Active Button Left */
-.btn.active {
+.btn-active {
   background-color: #834cd4; 
-  padding: 18px 18px;
-  font-size: 20px;
+  padding: 14px 14px;
+  border-radius: 6px;
+  font-size: 18px;
+  justify-content: flex-start;
   color: white;
   border: none;
 }
@@ -276,6 +281,7 @@ nav{
   flex-shrink: 0;
 }
 .activity.reverse {
+  width: 100%;
   flex-direction: row-reverse;
 }
 
@@ -288,7 +294,7 @@ nav{
 }
 
 .activity-text {
-  width: 500px;
+  width: 100%;
   flex: 1;
 }
 
@@ -391,10 +397,12 @@ nav{
 
 /*--- Cards in My work section ---*/
 .projects-section {
+  width: 100%;
   padding: 40px 40px;
   background-color: #1e1e1e;
   color: white;
   margin-top: 40px;
+  border-radius: 12px;
   text-align: center;
 }
 
@@ -411,6 +419,7 @@ nav{
   margin-bottom: 40px;
 }
 .project-section {
+  width: 100%;
   padding: 0.4rem;
   font-family: 'Poppins', sans-serif;
   color: white;
@@ -436,7 +445,7 @@ nav{
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 120px;
+  gap: 40px;
   justify-items: center;
 }
 
@@ -716,27 +725,17 @@ hr {
   font-size: 24px;
 }
 /*------------css for small screens------------*/
-nav .fas{
-    display: none;
-}
 
 @media only screen and (max-width: 768px){
-  #header{
-      height: auto;
-      padding: 60px 0;
+  navbar{
+    display: flex;
+    padding: 20px 60px;
+    width: 100%;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: space-content;
   }
-  .header-text {
-      font-size: 16px;
-      margin-top: 0;
-      text-align: left;
-  }
-  .header-text h1{
-      font-size: 40px;
-      margin-bottom: 16px;
-  }
-  .header-text h3{
-      font-size: 28px;
-  }
+  
   nav .fas{
       display: block;
       font-size: 25px;
@@ -772,17 +771,42 @@ nav .fas{
       left: 25px;
       cursor: pointer;
   }
+
+  
+  #header{
+      height: auto;
+      padding: 60px 0;
+  }
+  .header-text {
+      font-size: 16px;
+      margin-top: 0;
+      text-align: left;
+  }
+  .header-text h1{
+      font-size: 40px;
+      margin-bottom: 16px;
+  }
+  .header-text h3{
+      font-size: 28px;
+  }
   .button-container {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    padding: 12px 12px;
     align-items: left;
     justify-content: left;
   }
   .btn {
       width: 80%;
       max-width: 172px;
+  }
+  .btn.active {
+    background-color: #834cd4; 
+    padding: 12px 18px;
+    font-size: 18px;
+    justify-content: flex-start;
+    color: white;
+    border: none;
   }
   .sub-title{
       font-size: 40px;
@@ -852,15 +876,12 @@ nav .fas{
   }
   .tab-links.active-link::after{
     width: 20%;
-}
+  }
 
+  
   .project-top {
     flex-direction: column; 
     gap: 1rem;
-  }
-
-  .projects-section {
-    padding: 8px 16px; 
   }
 
   .projects-section h2 {
@@ -933,12 +954,13 @@ nav .fas{
     flex-basis: 100%;
   }
   .row {
-  flex-direction: column;
-  align-items: left;
-  text-align: justify;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
   }
   .footer {
     padding: 20px 20px; 
+    width: 100%;
   }
 
   .footer-header h2 {
@@ -965,5 +987,25 @@ nav .fas{
   .footer-bottom {
     font-size: 16px;
     margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+   .hero-text h1 {
+    font-size: 1.8rem; /* smaller on mobile */
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+  .hero-text {
+    padding: 0 1rem; /* add horizontal padding */
+  }
+   .project-cards {
+    grid-template-columns: 1fr; /* stack cards vertically */
+    padding: 0 1rem;
+  }
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
