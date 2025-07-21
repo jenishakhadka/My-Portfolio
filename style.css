@@ -992,16 +992,16 @@ hr {
 
 @media only screen and (max-width: 600px) {
    .hero-text h1 {
-    font-size: 1.8rem; /* smaller on mobile */
+    font-size: 1.8rem; 
   }
   .hero-text p {
     font-size: 1rem;
   }
   .hero-text {
-    padding: 0 1rem; /* add horizontal padding */
+    padding: 0 1rem; 
   }
    .project-cards {
-    grid-template-columns: 1fr; /* stack cards vertically */
+    grid-template-columns: 1fr; 
     padding: 0 1rem;
   }
   .footer-content {
