@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jenisha Khadka Portfolio</title>
-    <link rel="stylesheet" href="/My-Portfolio/style.css">
+    <link rel="stylesheet" href="style.css">
     <!-- Linking Google fonts for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://kit.fontawesome.com/538f1ffc20.js" crossorigin="anonymous"></script>
@@ -21,7 +21,7 @@
         </ul>
     </header>
   <div id="header">
-    <div class="container">
+    <div class="section-wrapper">
       <div class="header-text">
         <h1>Namaste! I'm <span>Jenisha</span> Khadka</h1>
         <h3>I create intuitive and impactful digital experiences that enhance usability and drive engagement.</h3>
@@ -34,7 +34,7 @@
 
 <!-- ------------services------------ -->
 <div id="services">
-    <div class="container">
+    <div class="section-wrapper">
       <h1 class="sub-title">My Services</h1>
       <div class="services-list">
               <div>
@@ -61,9 +61,9 @@
 <!-- ------------work------------ -->
 
  <div id="work">
-    <div class="container">
+    <div class="section-wrapper">
       <h1 class="sub-title">My Work</h1>
-      <section class="projects-section">
+      <!--<section class="projects-section"> -->
         <h2>Explore my recent projects</h2>
 
         <div class="card-container">
@@ -82,8 +82,8 @@
             </div>
           </a>
 
-          <div class="card">
-            <a href="reliablecargo.html" class="card-link">
+          <a href="reliablecargo.html" class="card-link">
+            <div class="card">
               <img src="Images/ReliableCargo.png" alt="Reliable Cargo" />
               <div class="card-content">
                 <span class="tag">Responsive Website</span>
@@ -94,11 +94,11 @@
                   <span>Role: UI/UX Designer</span>
                 </div>
               </div>
-            </a>
-          </div>
+           </div>
+          </a>
 
-          <div class="card">
-            <a href="tmc.html" class="card-link">
+          <a href="tmc.html" class="card-link">
+            <div class="card">
               <img src="Images/TMC.png" alt="TMC Cargo" />
               <div class="card-content">
                 <span class="tag">Responsive Website</span>
@@ -109,11 +109,11 @@
                   <span>Role: UI/UX Designer</span>
                 </div>
               </div>
-            </a>
-          </div>
+           </div>
+          </a>
 
-          <div class="card">
-            <a href="theggo.html" class="card-link">
+          <a href="theggo.html" class="card-link">
+            <div class="card">
               <img src="Images/Theggo.png" alt="Theggo" />
               <div class="card-content">
                 <span class="tag">Responsive Website</span>
@@ -124,11 +124,11 @@
                   <span>Role: UI/UX Designer</span>
                 </div>
               </div>
-            </a>
-          </div>
+            </div>
+          </a>
 
-          <div class="card">
-            <a href="careinfosolutions.html" class="card-link">
+          <a href="careinfosolutions.html" class="card-link">
+            <div class="card">
               <img src="Images/Careinfo-Solutions-Desktop.jpg" alt="Careinfo Solutions" />
               <div class="card-content">
                 <span class="tag">Responsive Website</span>
@@ -138,12 +138,12 @@
                   <span>Duration: 2 weeks</span>
                   <span>Role: UI/UX Designer</span>
                 </div>
-              </div>
-            </a>
-          </div>
+             </div>
+           </div>
+         </a>
 
-          <div class="card">
-            <a href="treelytics.html" class="card-link">
+          <a href="treelytics.html" class="card-link">
+            <div class="card">
               <img src="Images/Treelytics.png" alt="Treelytics" />
               <div class="card-content">
                 <span class="tag">Web App(Desktop only)</span>
@@ -153,70 +153,44 @@
                   <span>Duration: 2 months</span>
                   <span>Role: UI/UX Designer</span>
                 </div>
-              </div>
-          </a>
-          </div> 
-      </section>
-    </div>
+            </div>
+          </div>
+        </a>
+        <!-- </section> -->
+     </div>
+   </div>
  </div>
-
-<!-- ------------contact------------
-
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-center">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i> zenishak0@gmail.com </p>
-                <p><i class="fa-solid fa-phone"></i> 977-9800000001 </p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/jenishakhadkaa/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.behance.net/jenishakhadkaa"><i class="fa-brands fa-behance"></i></a>
-                </div>
-            </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">submit</button>
-                </form>
-                <span id="msg"></span>
-            </div>
-        </div>
-    </div> -->
-    
   <footer class="footer">
-  <div class="footer-header">
-    <h2>Jenisha Khadka</h2>
-  </div>
-
-  <hr>
-
-  <div class="footer-content">
-    <div class="footer-col">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Me</a>
+    <div class="footer-header">
+      <h2>Jenisha Khadka</h2>
     </div>
-    <div class="footer-col">
-      <a href="https://www.behance.net/jenishakhadkaa" target="_blank">
-        <i class="fa-brands fa-behance"></i> Behance
-      </a>
-      <a href="https://www.linkedin.com/in/jenishakhadkaa/" target="_blank">
-        <i class="fa-brands fa-linkedin"></i> LinkedIn
-      </a>
-    </div>
-    <div class="footer-col">
-      <i class="fa-solid fa-envelope"></i> 
-      <p>Mail: zenishak0@gmail.com</p>
-    </div>
-  </div>
 
-  <hr>
+    <hr>
 
-  <div class="footer-bottom">
-    <p>© 2025 Jenisha Khadka. All rights reserved.</p>
-  </div>
+    <div class="footer-content">
+      <div class="footer-col">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+      </div>
+      <div class="footer-col">
+        <a href="https://www.behance.net/jenishakhadkaa" target="_blank">
+          <i class="fa-brands fa-behance"></i> Behance
+        </a>
+        <a href="https://www.linkedin.com/in/jenishakhadkaa/" target="_blank">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+      <div class="footer-col">
+        <i class="fa-solid fa-envelope"></i> 
+        <p>Mail: zenishak0@gmail.com</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom">
+      <p>© 2025 Jenisha Khadka. All rights reserved.</p>
+    </div>
 </footer>      
 <script>
 
@@ -229,23 +203,5 @@
         sidemenu.style.right = "-200px";
     }
 </script>
-<!--<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzYFlLzEB5vilxFokzceI8luOQIerGiolfE9J9HlpLfuazkpW7R_UJ1BtwcyjS8uwuQ/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById('msg')
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script> -->
 </body>
 </html>
