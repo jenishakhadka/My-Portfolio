@@ -115,4 +115,34 @@
     });
   }
 })();
+
+(function () {
+  var burger = document.getElementById('burger'), menu = document.getElementById('menu');
+  function set(o) { menu.classList.toggle('open', o); burger.setAttribute('aria-expanded', String(o)); }
+  burger.addEventListener('click', function () { set(burger.getAttribute('aria-expanded') !== 'true'); });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
+  window.addEventListener('resize', function () { if (innerWidth > 700) set(false); });
+
+  // Home: click a category to filter case studies; click again to show all
+  var btns = document.querySelectorAll('.cats button'), cards = document.querySelectorAll('.card');
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var on = b.getAttribute('aria-pressed') === 'true';
+      btns.forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+      if (!on) b.setAttribute('aria-pressed', 'true');
+      cards.forEach(function (c) {
+        c.hidden = !on && c.dataset.cat.split(',').indexOf(b.dataset.cat) === -1;
+      });
+    });
+  });
+})();
+
+(function () {
+  document.querySelectorAll('[data-dialog]').forEach(function (b) {
+    var d = document.getElementById(b.dataset.dialog);
+    b.addEventListener('click', function () { if (d.showModal) d.showModal(); });
+    d.addEventListener('click', function (e) { if (e.target === d) d.close(); });
+  });
+})();
+
  
