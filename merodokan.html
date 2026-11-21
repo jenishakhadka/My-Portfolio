@@ -121,7 +121,7 @@
 <section class="wrap block">
   <h2>Information Architecture Diagram</h2>
   <p>MeroDokan's existing navigation and module structure were retained during the redesign. The work focused on improving the visual presentation of the existing product rather than changing its information architecture.</p>
-  <div class="scroll-x"><img class="ia" src="assets/images/MeroDokan/MD IA.png" alt="Information architecture"></div>
+  <img class="ia" src="assets/images/MeroDokan/MD IA.png" alt="Information architecture">
 
   <h2 class="gap">System Foundation</h2>
   <p class="sub">A consistent visual foundation was applied to support a cohesive interface across MeroDokan's desktop screens.</p>
@@ -132,18 +132,18 @@
     <div class="colors">
       <img src="assets/images/MeroDokan/Color System.png" alt="Blue, grey and white color scales with contrast ratios">
       <ul class="swatches">
-        <li><span style="background:#1166AA"></span>Primary</li>
-        <li><span style="background:#4e4e4e"></span>Neutral</li>
         <li><span style="background:#fefefe"></span>Surface</li>
+        <li><span style="background:#d0342c"></span>Alert</li>
+        <li><span style="background:#1166aa"></span>Primary</li>
+        <li><span style="background:#2e2e2e"></span>Neutral</li>
       </ul>
     </div>
 
     <h3 class="sec">02 Typography</h3>
     <p>Inter was used throughout the interface to establish a clear typographic hierarchy and maintain readability across headings, labels, tables, and body text.</p>
-    <div class="scroll-x"><img class="type-spec" src="assets/images/MeroDokan/MD Typography.png" alt="Inter type scale from H1 to Tiny text in four weights"></div>
-
+    <img class="type-spec" src="assets/images/MeroDokan/MD Typography.png" alt="Inter type scale from H1 to Tiny text in four weights">
     <h3 class="sec">03 Icons</h3>
-    <p>A consistent icon style and sizing approach was used to maintain visual alignment and familiarity across interface elements.</p>
+    <p>Outline icons from Iconify were selected to support quick recognition across the interface. A consistent size, stroke weight, and alignment keep them uniform throughout the product.</p>    
     <img class="icon-row" src="assets/images/MeroDokan/Icons.png" alt="Outline icon set">
     <div class="icons-grid">
       <table class="spec">
@@ -159,12 +159,12 @@
     </div>
 
     <h3 class="sec">04 Components</h3>
-    <p>Reusable styling patterns were applied to buttons, input fields, tables, and other recurring UI elements to maintain consistency across modules.</p>
+    <p>I created reusable components, including the navbar, sidebar, buttons in multiple sizes and states, text fields, pagination, and footer, to maintain consistent styling across the platform.</p>
     <img class="buttons" src="assets/images/MeroDokan/Components.png" alt="Button states: default, hover, active and ghost in small, medium and large">
   </div>
 
   <h2 class="gap">Before vs. After</h2>
-  <p class="cap">The redesign focused on refining the existing interface while preserving its underlying product structure and functionality.</p>
+  <p class="cap">The original MeroDokan dashboard hid its figures behind show buttons and displayed only placeholder dashes, while the redesign brings quick actions, key metrics with trends, a sales trend chart, an expense breakdown, and bank details onto one screen.</p>
   <div class="ba">
     <figure><figcaption>Before</figcaption><img src="assets/images/MeroDokan/Before.png" alt="Original dashboard"></figure>
     <svg class="arrow" viewBox="0 0 80 20" aria-hidden="true"><path d="M0 10h76M68 2l8 8-8 8" fill="none" stroke="#fff" stroke-width="2"/></svg>
@@ -176,8 +176,8 @@
     <figure><h3>Dashboard</h3><p>The dashboard brings quick actions, key business metrics, a sales trend chart, an expense breakdown and bank details onto one screen, with Daily, Monthly and Yearly views for comparing performance.</p><img src="assets/images/MeroDokan/MD Dashboard.png" alt="Dashboard"></figure>
     <figure><h3>Master - Ledgers</h3><p>Ledgers are listed in a clean, searchable table with an Add new button. Pagination and horizontal scrolling keep long lists with many columns easy to manage.</p><img src="assets/images/MeroDokan/MD Ledgers 1.png" alt="Master - Ledgers"></figure>
     <figure><h3>Entry - Sales Orders</h3><p>Sales orders can be filtered by start and end date in both the Gregorian (AD) and Nepali (Miti) calendars. Results appear in a table with a summary row and an Add new button.</p><img src="assets/images/MeroDokan/MD Sales Orders 1.png" alt="Entry - Sales Orders"></figure>
-    <figure><h3>Reports - Statement</h3><p>The statement report lets users filter by date range and ledger, with optional toggles for remarks, product details and reference number. The table shows debit, credit and balance, with refresh and PDF or Excel export.</p><img src="assets/images/MeroDokan/MD Statement 1.png" alt="Reports - Statement"></figure>
-    <figure><h3>Stock Reports</h3><p>The stock report shows opening and received quantities and values per transaction for the selected godown, ending in a grand total row. Users can search the table, export to PDF or Excel, and use the Normal Report and Show All Products options.</p><img src="assets/images/MeroDokan/MD Stock Report.png" alt="POS screen"></figure>
+    <figure><h3>Reports - Statement</h3><p>The statement report filters by date range and ledger, with toggles for remarks, product details and reference number, and shows debit, credit and balance with PDF or Excel export.</p><img src="assets/images/MeroDokan/MD Statement 1.png" alt="Reports - Statement"></figure>
+    <figure><h3>Stock Reports</h3><p>The stock report shows opening and received quantities and values per transaction. Users can search the table, export to PDF or Excel, and use the Normal Report and Show All Products options.</p><img src="assets/images/MeroDokan/MD Stock Report.png" alt="POS screen"></figure>
     <figure><h3>Additional Settings - Approval Settings</h3><p>Additional Settings groups preferences into Feature Toggles, Stock Display, Barcode Settings and Thresholds, so users can switch features on or off and set stock and credit limits in one place.</p><img src="assets/images/MeroDokan/MD Additional Settings.png" alt="Additional Settings - Approval Settings"></figure>
   </div>
 </section>
@@ -193,7 +193,9 @@
       <dt>Rationale</dt><dd>As a shop-management application, MeroDokan needed a visual identity connected to its retail and business-management purpose. I designed a weighing-machine symbol paired with the product name to create a distinctive and relevant visual mark.</dd>
       <dt>Outcome</dt><dd>A custom logo that connects MeroDokan's identity with its shop-management purpose and gives the product a recognizable presence across the application.</dd>
     </dl>
-    <img src="assets/images/MeroDokan/logo.png" alt="Logo">
+    <dl>
+     <img src="assets/images/MeroDokan/logo.png" alt="Logo">
+    </dl>
   </article>
 
   <article class="dec">
@@ -203,7 +205,9 @@
       <dt>Rationale</dt><dd>The original MeroDokan dashboard offered a limited overview of daily business activities. I expanded it with quick actions, financial summaries, sales and expense charts, and bank information to make important details accessible from the main screen.</dd>
       <dt>Outcome</dt><dd>The dashboard provides a consolidated view of business performance and commonly used actions, reducing the need to navigate between separate modules for an overview.</dd>
     </dl>
-    <img src="assets/images/MeroDokan/DD1.png" alt="Redesigned dashboard">
+    <dl>
+      <img src="assets/images/MeroDokan/DD1.png" alt="Redesigned dashboard">
+    </dl>
   </article>
 
   <article class="dec">
@@ -213,7 +217,9 @@
       <dt>Rationale</dt><dd>MeroDokan handles various shop-management records, including products, transactions, and financial entries. I refined the presentation of these records through clearer table structures, consistent spacing, aligned data, organized filters, and improved visual hierarchy.</dd>
       <dt>Outcome</dt><dd>The redesigned interface presents business records in a more structured format, making information easier to scan, filter, and navigate.</dd>
     </dl>
-    <img src="assets/images/MeroDokan/DD2.png" alt="">
+    <dl>
+      <img src="assets/images/MeroDokan/DD2.png" alt="">
+    </dl>
   </article>
 
   <article class="dec">
@@ -223,7 +229,9 @@
       <dt>Rationale</dt><dd>I added Settings and Notifications icons to the main navigation for direct access to these features. I also moved company details from the profile dropdown to a persistent footer displaying the company name, active fiscal year, and date range.</dd>
       <dt>Outcome</dt><dd>Settings and Notifications are accessible directly from the navbar, while company and fiscal-period information remains visible in the footer without requiring users to open the profile menu.</dd>
     </dl>
-    <img src="assets/images/MeroDokan/DD3.png" alt="">
+    <dl>
+      <img src="assets/images/MeroDokan/DD3.png" alt="">
+    </dl>
   </article>
 
   <article class="dec">

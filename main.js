@@ -1,9 +1,3 @@
-/* ==========================================================================
-   Mero Billing – Case Study
-   1. Mobile menu
-   2. Information-architecture connector line
-   3. Image lightbox
-   ========================================================================== */
 (function () {
   'use strict';
  

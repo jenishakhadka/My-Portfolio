@@ -83,7 +83,8 @@
 
 <section class="wrap block">
   <h2>Information Architecture Diagram</h2>
-  <div class="scroll-x"><img class="ia" src="assets/images/MeroBilling/MB IA.png" alt="Information architecture: Mero Billing branches into Dashboard, Master, Entry, Reports, POS System and Configurations"></div>
+  <p>MeroBilling's existing navigation and module structure were retained during the redesign. The work focused on improving the visual presentation of the existing product rather than changing its information architecture.</p>
+  <img class="ia" src="assets/images/MeroBilling/MB IA.png" alt="Information architecture: Mero Billing branches into Dashboard, Master, Entry, Reports, POS System and Configurations">
 
   <h2 class="gap">System Foundation</h2>
   <p class="sub">A shared visual foundation of color, typography, iconography, and reusable components to support consistency across the redesigned screens.</p>
@@ -93,16 +94,26 @@
     <div class="colors">
       <img src="assets/images/MeroBilling/Color System.png" alt="Green, grey and white color scales with contrast ratios">
       <ul class="swatches">
-        <li><span style="background:#25671e"></span>Primary</li>
-        <li><span style="background:#4e4e4e"></span>Neutral</li>
+        <li><span style="background:#D0342C"></span>Alert</li>
+        <li>
+          <div class="swatch-pair">
+            <span style="background:#e8b900"></span>
+            <span style="background:#d97d2d"></span>
+          </div>
+          Accent
+        </li>
         <li><span style="background:#fefefe"></span>Surface</li>
+        <li><span style="background:#4e4e4e"></span>Neutral</li>
+        <li><span style="background:#25671e"></span>Primary</li>
       </ul>
     </div>
 
     <h3 class="sec">02 Typography</h3>
-    <div class="scroll-x"><img class="type-spec" src="assets/images/MeroBilling/Typography.png" alt="Roboto Mono type scale from H1 to Tiny text in four weights"></div>
+    <p>Roboto Mono was used throughout the interface to establish a clear typographic hierarchy and maintain readability across headings, labels, tables, and body text.</p>
+    <img class="type-spec" src="assets/images/MeroBilling/Typography.png" alt="Roboto Mono type scale from H1 to Tiny text in four weights">
 
     <h3 class="sec">03 Icons</h3>
+    <p>Outline icons from Iconify were selected to support quick recognition of key actions. A consistent size, stroke weight, and alignment keep them uniform across the interface.</p>
     <img class="icon-row" src="assets/images/MeroBilling/Icons.png" alt="Outline icon set">
     <div class="icons-grid">
       <table class="spec">
@@ -118,25 +129,26 @@
     </div>
 
     <h3 class="sec">04 Components</h3>
+    <p>I created reusable components for the desktop application, including the navbar, buttons in multiple sizes and states, table cells, text fields, popup fields, filters, and pagination, to keep modules consistent.</p>
     <img class="buttons" src="assets/images/MeroBilling/Components.png" alt="Button states: default, hover, active and ghost in small, medium and large">
   </div>
 
   <h2 class="gap">Before vs. After</h2>
+  <p class="cap">The original Mero Billing dashboard offered only a welcome card and a sign out button on an otherwise empty page. Working with my mentor, I redesigned it with a green colour scheme, a company and fiscal year bar, and updated Master and Reports menu labels. I also added quick actions, an income versus expenses chart, bank details and key totals for sales, purchases, receivables and payables, so users get a clear snapshot as soon as they log in.</p>
   <div class="ba">
     <figure><figcaption>Before</figcaption><img src="assets/images/MeroBilling/Before.png" alt="Original dashboard"></figure>
     <svg class="arrow" viewBox="0 0 80 20" aria-hidden="true"><path d="M0 10h76M68 2l8 8-8 8" fill="none" stroke="#fff" stroke-width="2"/></svg>
     <figure><figcaption>After</figcaption><img src="assets/images/MeroBilling/After.png" alt="Redesigned dashboard"></figure>
   </div>
-  <p class="cap">Introduced quick actions, income and expense trends and financial summary insights to make the dashboard more informative.</p>
 
   <h2 class="gap">Module Redesigns</h2>
   <div class="modules">
-    <figure><h3>Dashboard</h3><img src="assets/images/MeroBilling/Dashboard.png" alt="Dashboard"></figure>
-    <figure><h3>Master - Account Groups</h3><img src="assets/images/MeroBilling/Master.png" alt="Account groups list"></figure>
-    <figure><h3>Entry - Purchase Orders</h3><img src="assets/images/MeroBilling/Entry.png" alt="Purchase orders list"></figure>
-    <figure><h3>Reports - Cash Flow</h3><img src="assets/images/MeroBilling/Reports.png" alt="Cash flow report"></figure>
-    <figure><h3>POS System</h3><img src="assets/images/MeroBilling/POS System.png" alt="POS screen"></figure>
-    <figure><h3>Configurations - Approval Settings</h3><img src="assets/images/MeroBilling/Configurations.png" alt="Edit configuration form"></figure>
+    <figure><h3>Dashboard</h3><p>The dashboard brings quick actions, an income versus expenses chart, bank details and key totals for sales, purchases, receivables and payables onto one screen, with Daily, Monthly and Yearly views.</p><img src="assets/images/MeroBilling/Dashboard.png" alt="Dashboard"></figure>
+    <figure><h3>Master - Account Groups</h3><p>Account groups are listed in a structured table with schedule range, type, sub type and ledger count. Search, row actions for edit and delete, pagination and a per-page selector keep large lists manageable.</p><img src="assets/images/MeroBilling/Master.png" alt="Account groups list"></figure>
+    <figure><h3>Entry - Purchase Orders</h3><p>Purchase orders are listed with order number, Miti and English dates, quotation, ledger and total quantity. Search, an Add New button, pagination and a per-page selector keep long lists easy to scan.</p><img src="assets/images/MeroBilling/Entry.png" alt="Purchase orders list"></figure>
+    <figure><h3>Reports - Cash Flow</h3><p>The cash flow report combines a date and Miti filter panel with a report card showing inflow, outflow and running balance, plus net change, totals and PDF or Excel export.</p><img src="assets/images/MeroBilling/Reports.png" alt="Cash flow report"></figure>
+    <figure><h3>POS System</h3><p>The POS screen is designed for fast counter sales, with a cart summary, a calculator keypad and shortcuts for promos, coupons, overrides and inquiries. The top bar shows the terminal, associate and shift, with options to hold a transaction or close the shift.</p><img src="assets/images/MeroBilling/POS System.png" alt="POS screen"></figure>
+    <figure><h3>Configurations - Approval Settings</h3><p>Edit Configuration groups the accounting defaults into sections for sales, purchase, finance and inventory, cancellations and additional settings. Users can assign ledgers, switch options such as Last Sales Rate on or off, and choose the date format and currency.</p><img src="assets/images/MeroBilling/Configurations.png" alt="Edit configuration form"></figure>
   </div>
 </section>
 
@@ -151,7 +163,9 @@
       <dt>Rationale</dt><dd>The logo was designed around a billing-machine visual, connecting the product's identity with its core functionality. The green color and distinctive icon give the application a recognizable visual mark.</dd>
       <dt>Outcome</dt><dd>A custom logo that visually represents Mero Billing and gives the application a distinct product identity.</dd>
     </dl>
-    <img src="assets/images/MeroBilling/MB Logo.png" alt="Logo">
+    <dl>
+      <img src="assets/images/MeroBilling/MB Logo.png" alt="Logo">
+   </dl>
   </article>
 
   <article class="dec">
@@ -161,7 +175,9 @@
       <dt>Rationale</dt><dd>The original dashboard displayed very limited information on the main screen, with most functionality accessible only through individual modules. I reorganized the dashboard to bring frequently used actions, financial information and business activity into a single screen.</dd>
       <dt>Outcome</dt><dd>The redesigned dashboard brings key business information and frequently used actions into a single, clearly structured overview.</dd>
     </dl>
-    <img src="assets/images/MeroBilling/DD1.png" alt="Redesigned dashboard">
+    <dl>
+      <img src="assets/images/MeroBilling/DD1.png" alt="Redesigned dashboard">
+    </dl>
   </article>
 
   <article class="dec">
@@ -171,7 +187,9 @@
       <dt>Rationale</dt><dd>Mero Billing contains substantial amounts of business and financial data, particularly in tables, forms, and reports. Rather than removing essential information, I focused on improving its organization through consistent spacing, alignment, grouping, and visual hierarchy.</dd>
       <dt>Outcome</dt><dd>The redesigned tables retain the information required for data-intensive workflows while presenting it in a more structured and readable format.</dd>
     </dl>
-    <img src="assets/images/MeroBilling/DD2.png" alt="Redesigned account groups table">
+    <dl>
+      <img src="assets/images/MeroBilling/DD2.png" alt="Redesigned account groups table">
+    </dl>
   </article>
 
   <article class="dec">
@@ -181,7 +199,9 @@
       <dt>Rationale</dt><dd>Mero Billing consists of multiple major modules and numerous sub-modules, including Master, Entry, Reports, POS, and Configurations. I organized related functionality into clear navigation categories while maintaining a visible and predictable structure across the product.</dd>
       <dt>Outcome</dt><dd>The redesigned navigation presents related modules and submodules in a more structured hierarchy, creating a consistent framework across the redesigned screens.</dd>
     </dl>
-    <img src="assets/images/MeroBilling/DD3.png" alt="Create account group screen">
+    <dl>
+      <img src="assets/images/MeroBilling/DD3.png" alt="Create account group screen">
+    </dl>
   </article>
 
   <article class="dec">

@@ -50,11 +50,16 @@
       </div>
     </div>
     <nav class="folders" aria-label="Contact and extras">
-      <a href="mailto:zenishak0@gmail.com"><span class="fi"></span>Mail</a>
-      <a href="assets/docs/Jenisha Khadka (Resume).pdf" target="_blank" rel="noopener"><span class="fi"></span>Resume</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=zenishak0@gmail.com" target="_blank" rel="noopener">
+       <span class="fi"></span>Mail
+      </a>
+      <a href="assets/docs/Jenisha Khadka (Resume).pdf" target="_blank" rel="noopener">
+        <span class="fi">
+        </span>Resume
+      </a>
       <button type="button" data-dialog="d-cert"><span class="fi"></span>Certificates</button>
       <button type="button" data-dialog="d-fun"><span class="fi"></span>Fun fact</button>
-</nav>
+    </nav>
   </div>
 </section>
 
@@ -113,6 +118,27 @@
   </div>
 </footer>
 
-<script src="js/pages.js"></script>
+<script src="main.js"></script>
+
+<script>
+  (function () {
+    var box = document.querySelector('.title-box');
+    if (!box) return;
+    var GRID = 40;
+
+    function snap() {
+      box.style.width = '';
+      box.style.height = '';
+      var r = box.getBoundingClientRect();
+      box.style.width = Math.ceil(r.width / GRID) * GRID + 'px';
+      box.style.height = Math.ceil(r.height / GRID) * GRID + 'px';
+    }
+
+    snap();
+    window.addEventListener('resize', snap);
+    window.addEventListener('load', snap);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(snap);
+  })();
+</script>
 </body>
 </html>
