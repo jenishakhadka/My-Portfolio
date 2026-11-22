@@ -892,25 +892,38 @@ iconify-icon{
 }
 
 .index-hero .wrap{
-  padding-top:26px
+  padding-top:26px;
+  padding-bottom:32px;
+  gap:30px;
 }
 
 .title-box{
-  padding-left:22px
+  padding:0 0 12px 22px;
+}
+
+.index-hero h1{
+  font-size:clamp(48px, 13vw, 68px);
+  line-height:.95;
+}
+
+.star{
+  font-size:34px;
+  left:-2px;
+  top:-5px;
 }
 
 .note{
   position:static;
-  margin:14px 0 0 30px;
-  transform:rotate(-8deg)
+  margin:14px 0 0 22px;
+  transform:rotate(-8deg);
 }
 
 .arrow{
-  display:none
+  display:none;
 }
 
 .kit{
-  margin-left:0
+  margin:22px 0 0 22px;
 }
 
 .btn{
@@ -2820,3 +2833,102 @@ ol.scope ul.points li::before {
   font-weight:500 !important;
 }
 
+
+/* Explore More Projects */
+
+.more-projects {
+  padding: 80px 0;
+  border-top: 1px solid var(--line);
+}
+
+.more-heading {
+  margin-bottom: 30px;
+}
+
+.more-heading span {
+  font: 500 12px var(--f-ui);
+  letter-spacing: 2px;
+  color: #999;
+}
+
+.more-heading h2 {
+  font: 700 32px var(--f-body);
+  margin: 10px 0;
+}
+
+.more-heading p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.project-carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 24px) / 2);
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  padding-bottom: 14px;
+}
+
+.project-card {
+  min-width: 0;
+  color: #fff;
+  text-decoration: none;
+  scroll-snap-align: start;
+}
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  transition: transform .3s ease;
+}
+
+.project-card:hover img {
+  transform: translateY(-4px);
+}
+
+.project-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+}
+
+.project-info h3 {
+  font: 600 18px var(--f-body);
+  margin-bottom: 6px;
+}
+
+.project-info p {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.project-info > span {
+  font-size: 22px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .more-projects {
+    padding: 50px 0;
+  }
+
+  .more-heading h2 {
+    font-size: 25px;
+  }
+
+  .project-carousel {
+    grid-auto-columns: 85%;
+    gap: 16px;
+  }
+
+  .project-info h3 {
+    font-size: 16px;
+  }
+}
