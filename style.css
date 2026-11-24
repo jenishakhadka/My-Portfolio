@@ -1160,8 +1160,40 @@ iconify-icon{
   border-radius:8px;
   background:linear-gradient(#9aa0f6,#9aa0f6) bottom/100% 82% no-repeat,linear-gradient(#7f86f0,#7f86f0) left top/45% 24% no-repeat;transition:transform .2s}
 .folders a:hover::before,.folders button:hover::before,.folders a:focus-visible::before,.folders button:focus-visible::before{transform:translateY(-4px)}
-@media (max-width:900px){.index-hero .wrap{flex-direction:column}.folders{margin:10px 0 0;padding-top:0}}
-@media (max-width:700px){.folders{grid-template-columns:repeat(2,110px);gap:22px 30px}.folders a,.folders button{font-size:15px}.folders a::before,.folders button::before{width:60px;height:50px}}
+
+@media (max-width:900px){
+  .index-hero .wrap{
+    flex-direction:column
+  }
+  .folders{
+    margin:10px 0 0;
+    padding-top:0
+  }
+}
+
+@media (max-width:700px){
+   .folders{
+    grid-template-columns:repeat(2, 110px);
+    width:100%;
+    margin:10px 0 0;
+    padding:0;
+    gap:40px 60px;
+    justify-content:start;
+  }
+
+  .folders a,
+  .folders button{
+    font-size:16px;
+    gap:10px;
+    justify-items:center;
+  }
+
+  .folders a::before,
+  .folders button::before{
+    width:85px;
+    height:70px;
+  }
+}
 
 
 /* Pop-ups (Certificates, Fun fact) */
@@ -2309,7 +2341,7 @@ ol.scope ul.points li::before {
 
 .soc{
   display:flex;
-  gap:8px;
+  gap:16px;
   font-size:16px
 }
 
