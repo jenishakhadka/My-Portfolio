@@ -98,8 +98,12 @@ h2.gap{
   max-width:1260px
 }
 
-.indent > p{ margin-top:0 }
-.indent > p + :is(img, .colors, .scroll-x, .icons-grid){ margin-top:24px }
+.indent > p{ 
+  margin-top:0 
+}
+.indent > p + :is(img, .colors, .scroll-x, .icons-grid){ 
+  margin-top:24px 
+}
 
 
 .scroll-x{
@@ -221,7 +225,8 @@ a{
 .wrap{
   max-width:1512px;
   margin:0 auto;
-  padding:0 var(--pad)
+  padding:0 var(--pad);
+  text-align: justify
 }
 
 :focus-visible{
@@ -362,9 +367,9 @@ iconify-icon{
 
 .title-box{
   position:relative;
-  width:max-content;
+  max-width: 440px;
   max-width:100%;
-  padding:0 0 12px 30px;
+  padding:0 0 12px 22px;
   background-image:linear-gradient(rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.14) 1px,transparent 1px);
   background-size:10px 10px
 }
@@ -448,6 +453,7 @@ iconify-icon{
 
 .cats ul{
   display:flex;
+  font-size: 20px;
   justify-content:space-between;
   gap:30px;
   min-width:max-content;
@@ -456,21 +462,6 @@ iconify-icon{
   padding:0 var(--pad);
   height:88px;
   align-items:center
-}
-
-.cats button{
-  background:none;
-  border:0;
-  color:#fff;
-  font:500 24px var(--f-m);
-  cursor:pointer;
-  padding:8px 0px;
-  border-radius:4px;
-  white-space:nowrap
-}
-
-.cats button:hover,.cats button[aria-pressed=true]{
-  background:rgba(255,255,255,.12)
 }
 
 
@@ -900,11 +891,13 @@ iconify-icon{
 }
 
 .hero-intro {
-  margin-left: 22px;
+  text-align: justify;
 }
 
 .title-box{
   padding:0 0 12px 22px;
+  max-width: 440px
+
 }
 
 .index-hero h1{
@@ -940,8 +933,6 @@ iconify-icon{
 .cats ul{
   height:68px;
   justify-content:flex-start
-}.cats button{
-  font-size:17px
 }
 
 .cs{
@@ -962,8 +953,8 @@ iconify-icon{
   font-size:23px
 }
 .card p{
-  font-size:17px;
-  text-align:left
+  font-size:16px;
+  text-align:justify
 }
 
 
@@ -1125,14 +1116,28 @@ iconify-icon{
 .info p{
   font:400 clamp(14px,1.45vw,16px)/1.3 var(--f-m);
   margin-top:8px;
-  text-align:left
+  text-align: justify
 }
 
 /* Touch devices and phones have no hover: show the text under the image */
 @media (hover:none),(max-width:700px){
-  .info{position:static;opacity:1;transform:none;background:none;padding:14px 0 0}
-  .info h3{font-size:23px}.info p{font-size:16px}
-  .card{padding:18px}
+  .info{
+    position:static;
+    opacity:1;
+    transform:none;
+    background:none;
+    padding:14px 0 0
+  }
+  .info h3{
+    font-size:23px
+  }
+  .info p{
+    font-size:16px;
+    text-align:justify
+  }
+  .card{
+    padding:18px
+  }
 }
 
 
@@ -1257,11 +1262,12 @@ dialog .close{
 }
 
 .hero-intro {
-  max-width: 580px;
+  max-width: 440px;
   margin-top: 18px;
   font-size: 16px;
   line-height: 1.7;
   font-weight: 600;
+  text-align: justify;
 }
 
 .logo{
@@ -1714,8 +1720,10 @@ ol.scope ul.points li::before {
 .dec h3{
   font-size:32px;
   font-weight:700;
-  display:flex;gap:10px;
-  padding-left:40px
+  display:flex;
+  gap:10px;
+  padding-left:40px;
+  text-align: left;
 }
 
 .dec dl{
@@ -2050,7 +2058,7 @@ ol.scope ul.points li::before {
   
   .lead{
     font-size:17px;
-    text-align:left
+    text-align:justify
   }
   
   .facts{
@@ -2064,7 +2072,7 @@ ol.scope ul.points li::before {
   
   .band p{
     font-size:17px;
-    text-align:left
+    text-align:justify
   }
   
   .band-process p{
@@ -2110,7 +2118,8 @@ ol.scope ul.points li::before {
     font-size:21px
   }
   .problems p{
-    font-size:18px
+    font-size:18px;
+    text-align: justify
   }
 
   .steps li{
@@ -2196,7 +2205,7 @@ ol.scope ul.points li::before {
   
   .dec dd{
     font-size:16px;
-    text-align:left
+    text-align:justify
   }
 
   .callout-fig{
@@ -2723,9 +2732,6 @@ ol.scope ul.points li::before {
   padding-top:26px
 }
 
-.title-box{
-  padding-left:22px
-}
 
 .module h3{
   font-size:21px;
@@ -2743,7 +2749,7 @@ ol.scope ul.points li::before {
 
 .note{
   position:static;
-  margin:14px 0 0 30px;
+  margin:30px 0 0 12px;
   transform:rotate(-8deg)
 }
 
@@ -2764,9 +2770,7 @@ ol.scope ul.points li::before {
   height:68px;
   justify-content:flex-start
 }
-.cats button{
-  font-size:17px
-}
+
 
 .cs{
   padding-top:48px
@@ -2786,8 +2790,8 @@ ol.scope ul.points li::before {
   font-size:23px
 }
 .card p{
-  font-size:17px;
-  text-align:left
+  font-size:16px;
+  text-align:justify
 }
 
 .foot{
